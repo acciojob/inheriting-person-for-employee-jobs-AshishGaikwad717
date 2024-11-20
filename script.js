@@ -1,4 +1,3 @@
-// complete this js code
 // Define the Person class
 class Person {
   constructor(name, age) {
@@ -29,16 +28,15 @@ class Employee extends Person {
 }
 
 // Example usage
-const person = new Person("Alice", 30);
-person.greet(); // Output: Hello, my name is Alice, I am 30 years old.
+const person = new Person("Alice", 25);
+person.greet(); // Output: Hello, my name is Alice, I am 25 years old.
 
-const employee = new Employee("Bob", 25, "Software Engineer");
-employee.greet(); // Output: Hello, my name is Bob, I am 25 years old.
-employee.jobGreet(); // Output: Hello, my name is Bob, I am 25 years old, and my job title is Software Engineer.
+const employee = new Employee("Bob", 30, "Manager");
+employee.greet(); // Output: Hello, my name is Bob, I am 30 years old.
+employee.jobGreet(); // Output: Hello, my name is Bob, I am 30 years old, and my job title is Manager.
 
 // Export the classes for Cypress testing
 module.exports = { Person, Employee };
-
 
 // Do not change code below this line
 window.Person = Person;
