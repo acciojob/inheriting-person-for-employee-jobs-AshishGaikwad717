@@ -7,14 +7,13 @@ class Person {
 
   // Method to greet
   greet() {
-    console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`);
+    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
   }
 }
 
 // Define the Employee class that extends Person
 class Employee extends Person {
   constructor(name, age, jobTitle) {
-    // Call the parent class constructor
     super(name, age);
     this.jobTitle = jobTitle;
   }
@@ -27,16 +26,6 @@ class Employee extends Person {
   }
 }
 
-// Example usage
-const person = new Person("Alice", 25);
-person.greet(); // Output: Hello, my name is Alice, I am 25 years old.
-
-const employee = new Employee("Bob", 30, "Manager"); 
-employee.jobGreet();
-
-// Export the classes for Cypress testing
-module.exports = { Person, Employee };
-
-// Do not change code below this line
+// Attach to the window object for Cypress testing
 window.Person = Person;
 window.Employee = Employee;
